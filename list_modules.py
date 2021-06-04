@@ -6,8 +6,9 @@ def print_modules():
     soup = bs4.BeautifulSoup(page.content, 'html.parser')
     modules = soup.find_all(id='index-of-all-modules')[0].find_all('li')
     for module in modules:
-        print(module.text, 'https://docs.ansible.com/ansible/latest/collections/' + module.find_all('a')[0]['href'])
-
+        print(module.text)
+        print('\t', 'https://docs.ansible.com/ansible/latest/collections/' + module.find_all('a')[0]['href'])
+        print()
 
 if __name__ == '__main__':
     print_modules()

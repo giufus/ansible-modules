@@ -6,4 +6,5 @@ List Ansible Modules Utility
 ```
 python -m nuitka list_modules.py
 ```
-- ./list_modules.bin | grep something
+- sudo ln -s /usr/local/bin/ansible_modules "abs path of list_modules.bin" (if you want)
+- ansible_modules | grep -A1 something
