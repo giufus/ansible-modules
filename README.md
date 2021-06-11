@@ -1,4 +1,8 @@
-List Ansible Modules Utility
+###Ansible Modules Search Utility  
+
+Just a little bit of scraping to quickly get what you need.  
+I hope it will be useful.
+
 
 - install python3 (possibly use a venv)  
 - install requests, nuitka and bs4 (possibly use pip)  
@@ -7,4 +11,9 @@ List Ansible Modules Utility
 python -m nuitka list_modules.py
 ```
 - sudo cp list_modules.bin /usr/bin/ansible_modules
-- ansible_modules keyword
+
+USAGE:
+```
+ansible_modules keyword
+```
+
