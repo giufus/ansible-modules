@@ -11,11 +11,11 @@ I hope it will be useful.
 ```
 python -m nuitka list_modules.py
 ```
-- sudo cp list_modules.bin /usr/bin/ansible_modules
+- sudo cp list_modules.bin /usr/bin/ansible-modules
 
 USAGE:
 ```
-ansible_modules keyword
+ansible-modules keyword
 ```
 
 ### To my "likes request" collegues says: 
