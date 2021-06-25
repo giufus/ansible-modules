@@ -1,6 +1,7 @@
 import bs4
 import requests
 import argparse
+import art
 
 def print_modules(keyword):
 
@@ -21,6 +22,9 @@ def print_modules(keyword):
 
 
 if __name__ == '__main__':
+
+    text_art = art.text2art("ansible-modules", font='bulbhead')
+    print(text_art)
 
     parser = argparse.ArgumentParser(description='Search Ansible Modules.')
     parser.add_argument('keyword', type=str, help='keyword to look for')
