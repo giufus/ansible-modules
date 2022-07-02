@@ -1,4 +1,5 @@
 *.iml
 .idea/
 list_modules.build/
+list_modules.bin
 .venv/

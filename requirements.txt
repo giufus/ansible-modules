@@ -1,4 +1,4 @@
-art==5.2
-beautifulsoup4==4.9.3
-Nuitka==0.6.15.1
-requests==2.25.1
+art
+beautifulsoup4
+Nuitka
+requests
