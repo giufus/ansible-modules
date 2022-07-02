@@ -5,13 +5,16 @@ I find it quicker than ansible-doc.
 I hope it will be useful.
 
 - build dependencies: `python3`, `requests`, `nuitka` and `bs4`  
-- generate the executable 
+- generate the executable (optional)
 ```
 python -m nuitka list_modules.py
 ```
-- sudo cp list_modules.bin /usr/bin/ansible-modules
 
-USAGE:
+USAGE: source or binary
 ```
-ansible-modules keyword
+python list_modules.py <keyword>
+```
+
+```
+list_modules.bin <keyword>
 ```
