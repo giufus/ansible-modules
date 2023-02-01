@@ -5,19 +5,22 @@ import art
 
 def print_modules(keyword):
 
-    page = requests.get("https://docs.ansible.com/ansible/latest/collections/index_module.html")
-    soup = bs4.BeautifulSoup(page.content, 'html.parser')
-    try:
-        modules = soup.find_all(id='index-of-all-modules')[0].find_all('li')
-        for module in modules:
-            description = module.text
+    if keyword:
+        print(art.text2art(keyword, font='bulbhead'), 'by ansible-modules', '\n')
 
-            if(keyword in description):
-                print(description)
-                print('\t', 'https://docs.ansible.com/ansible/latest/collections/' + module.find_all('a')[0]['href'])
-                print()
-    except Exception as ex:
-        print(f'Unable to get module catalog: {ex}')
+        page = requests.get("https://docs.ansible.com/ansible/latest/collections/index_module.html")
+        soup = bs4.BeautifulSoup(page.content, 'html.parser')
+        try:
+            modules = soup.find_all(id='index-of-all-modules')[0].find_all('li')
+            for module in modules:
+                description = module.text
+
+                if(keyword in description):
+                    print(description)
+                    print('\t', 'https://docs.ansible.com/ansible/latest/collections/' + module.find_all('a')[0]['href'])
+                    print()
+        except Exception as ex:
+            print(f'Unable to get module catalog: {ex}')
 
 
 
